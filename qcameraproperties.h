@@ -47,9 +47,9 @@ public:
 	void addProperty(QCameraProperties::QCameraPropertyTypes type, QCameraProperty *prop) { _properties.insert(type, prop); }
 	void clear(){_properties.clear(); }
 
-	QList<QVariant> getPropertyValues(QCameraProperties::QCameraPropertyTypes prop) { return _properties[prop]->values(); }
-	QList<QString> getPropertyKeys(QCameraProperties::QCameraPropertyTypes prop) { return _properties[prop]->keys(); }
-	QCameraProperty *getCameraProperty(QCameraProperties::QCameraPropertyTypes prop) { return _properties[prop]; }
+	QList<QVariant> getPropertyValues(QCameraProperties::QCameraPropertyTypes prop);// { return (_properties.empty() ?  QList<QVariant>() : _properties[prop]->values()); }
+	QList<QString> getPropertyKeys(QCameraProperties::QCameraPropertyTypes prop) { return (_properties.empty() ? QList<QString>() : _properties[prop]->keys()); }
+	QCameraProperty *getCameraProperty(QCameraProperties::QCameraPropertyTypes prop) { return (_properties.empty() ? 0 : _properties[prop]); }
 	friend class QCamera;
 
 	

@@ -1,0 +1,40 @@
+﻿Build started 4/3/2013 9:05:27 PM.
+     1>Project "C:\Users\jbowes\Documents\GitHub\QCameraInterface\QCameraInterface.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\QCameraInterface.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Moc'ing qcameraproperties.h...
+       ClCompile:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /Ic:\Qt\Qt5.0.1\5.0.1\msvc2010\include /I.\GeneratedFiles\Debug /Ic:\Qt\Qt5.0.1\5.0.1\msvc2010\include\QtCore /I.\ /Ic:\Qt\Qt5.0.1\5.0.1\msvc2010\include\QtGui /Ic:\Qt\Qt5.0.1\5.0.1\msvc2010\include\QtWidgets /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_THREAD_SUPPORT /D QT_CORE_LIB /D QCAMERAINTERFACE_LIB /D QT_GUI_LIB /D QT_DLL /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\Debug\moc_qcamera.cpp GeneratedFiles\Debug\moc_qcameradialog.cpp GeneratedFiles\Debug\moc_qcamerainterface.cpp GeneratedFiles\Debug\moc_qcameramanager.cpp GeneratedFiles\Debug\moc_qcameraproperties.cpp qcameradialog.cpp qcameramanager.cpp qcameraproperties.cpp
+         moc_qcamera.cpp
+         moc_qcameradialog.cpp
+         moc_qcamerainterface.cpp
+         moc_qcameramanager.cpp
+         moc_qcameraproperties.cpp
+         qcameradialog.cpp
+         qcameramanager.cpp
+         qcameraproperties.cpp
+         Generating Code...
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jbowes\Documents\GitHub\QCameraInterface\Debug\QCameraInterface.dll" /NOLOGO /LIBPATH:c:\Qt\Qt5.0.1\5.0.1\msvc2010\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\QCameraInterface.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\jbowes\Documents\GitHub\QCameraInterface\Debug\QCameraInterface.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jbowes\Documents\GitHub\QCameraInterface\Debug\QCameraInterface.lib" /MACHINE:X86 /DLL Debug\qcameradialog.obj
+         Debug\qcameramanager.obj
+         Debug\qcameraproperties.obj
+         Debug\qcameraproperty.obj
+         Debug\moc_qcamera.obj
+         Debug\moc_qcameradialog.obj
+         Debug\moc_qcamerainterface.obj
+         Debug\moc_qcameramanager.obj
+         Debug\moc_qcameraproperties.obj
+         LINK : C:\Users\jbowes\Documents\GitHub\QCameraInterface\Debug\QCameraInterface.dll not found or not built by the last incremental link; performing full link
+            Creating library C:\Users\jbowes\Documents\GitHub\QCameraInterface\Debug\QCameraInterface.lib and object C:\Users\jbowes\Documents\GitHub\QCameraInterface\Debug\QCameraInterface.exp
+         QCameraInterface.vcxproj -> C:\Users\jbowes\Documents\GitHub\QCameraInterface\Debug\QCameraInterface.dll
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\jbowes\Documents\GitHub\QCameraInterface\Debug\QCameraInterface.dll;#2" /manifest Debug\QCameraInterface.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\QCameraInterface.unsuccessfulbuild".
+         Touching "Debug\QCameraInterface.lastbuildstate".
+     1>Done Building Project "C:\Users\jbowes\Documents\GitHub\QCameraInterface\QCameraInterface.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:41.27
