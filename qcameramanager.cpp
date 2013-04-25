@@ -16,7 +16,13 @@ void QCameraManager::initialize()
 	QDir cameralibpath("./cameras");
 	cameralibpath.makeAbsolute();
 	qDebug(qPrintable(cameralibpath.absolutePath()));
-	foreach(QString cameralib, cameralibpath.entryList(QStringList("*.dll"),QDir::Files))
+#ifdef _WINDOWS
+    foreach(QString cameralib, cameralibpath.entryList(QStringList("*.dll"),QDir::Files))
+#elif __MACOS__
+    foreach(QString cameralib, cameralibpath.entryList(QStringList("*.dylib"),QDir::Files))
+#else
+    foreach(QString cameralib, cameralibpath.entryList(QStringList("*.so"),QDir::Files))
+#endif
 	{
 		qDebug(qPrintable(cameralibpath.absoluteFilePath(cameralib)));
 		QPluginLoader loader( cameralibpath.absoluteFilePath(cameralib));
@@ -24,12 +30,14 @@ void QCameraManager::initialize()
 		qDebug(qPrintable(loader.errorString()));
 		if(candidate)
 		{
-			QCameraInterface *camerainterface = qobject_cast<QCameraInterface *>(candidate);
-
-			if(camerainterface)
+                    QCameraInterface *camerainterface = qobject_cast<QCameraInterface *>(candidate);
+                 if(camerainterface)
 			{
-				_camerainterfacetypes[ camerainterface->name() ] = cameralibpath.absoluteFilePath(cameralib);
+                     qDebug(qPrintable("Loading interface..."));
+
+                         _camerainterfacetypes[ camerainterface->name() ] = cameralibpath.absoluteFilePath(cameralib);
 				camerainterface->initialize();
+                qDebug(qPrintable("Camera initialized"));
 				_availablecameras << camerainterface->getcameras();
 				_loadedInterfaces.append(camerainterface);
 			}

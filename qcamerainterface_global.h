@@ -2,7 +2,7 @@
 #define QCAMERAINTERFACE_GLOBAL_H
 
 #include <QtCore/qglobal.h>
-#include <QtGui>
+//#include <QtGui>
 
 #ifdef QCAMERAINTERFACE_LIB
 # define QCAMERAINTERFACE_EXPORT Q_DECL_EXPORT

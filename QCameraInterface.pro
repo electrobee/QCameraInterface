@@ -4,7 +4,7 @@
 
 TEMPLATE = lib
 TARGET = QCameraInterface
-DESTDIR = ./Debug
+
 QT += core widgets gui
 CONFIG += debug
 DEFINES += QT_LARGEFILE_SUPPORT QCAMERAINTERFACE_LIB QT_DLL
