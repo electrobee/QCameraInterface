@@ -19,6 +19,7 @@ public:
 	virtual void setbulbmode(bool bulb) = 0;
 
 	virtual QImage getImage() = 0;
+    virtual QString getImageFile() = 0;
 	virtual QString identifier() = 0;
 	virtual QString model() = 0;
 	virtual void setSelected() = 0;

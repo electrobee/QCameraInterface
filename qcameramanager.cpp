@@ -16,14 +16,19 @@ void QCameraManager::initialize()
 	QDir cameralibpath("./cameras");
 	cameralibpath.makeAbsolute();
 	qDebug(qPrintable(cameralibpath.absolutePath()));
-#ifdef _WINDOWS
+#ifdef Q_OS_WINDOWS
+    qDebug("looking for *.dll");
     foreach(QString cameralib, cameralibpath.entryList(QStringList("*.dll"),QDir::Files))
-#elif __MACOS__
+    {
+#elif defined Q_OS_MAC
+    qDebug("looking for *.dylib");
     foreach(QString cameralib, cameralibpath.entryList(QStringList("*.dylib"),QDir::Files))
+    {
 #else
+    qDebug("looking for *.so");
     foreach(QString cameralib, cameralibpath.entryList(QStringList("*.so"),QDir::Files))
+    {
 #endif
-	{
 		qDebug(qPrintable(cameralibpath.absoluteFilePath(cameralib)));
 		QPluginLoader loader( cameralibpath.absoluteFilePath(cameralib));
 		QObject *candidate = loader.instance();
